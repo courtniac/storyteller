@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseCategoryActivity">
+
+    <View
+        android:id="@+id/header3"
+        android:layout_width="411dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/library_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/choose_category"
+        android:textColor="@color/white1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/header3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header3" />
+
+    <View
+        android:id="@+id/ellipse"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintEnd_toStartOf="@+id/ellipse2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header3" />
+
+    <View
+        android:id="@+id/ellipse3"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintEnd_toStartOf="@+id/ellipse4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse" />
+
+    <View
+        android:id="@+id/ellipse4"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse2" />
+
+    <View
+        android:id="@+id/ellipse5"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse3" />
+
+    <View
+        android:id="@+id/ellipse2"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        android:onClick="goToPreferences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header3" />
+
+    <TextView
+        android:id="@+id/experiences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/experiences"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse"
+        app:layout_constraintStart_toStartOf="@+id/ellipse"
+        app:layout_constraintTop_toTopOf="@+id/ellipse" />
+
+    <TextView
+        android:id="@+id/preferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preferences"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse2"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse2"
+        app:layout_constraintStart_toStartOf="@+id/ellipse2"
+        app:layout_constraintTop_toTopOf="@+id/ellipse2" />
+
+    <TextView
+        android:id="@+id/eventsAndStories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/events_stories"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse3"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse3"
+        app:layout_constraintStart_toStartOf="@+id/ellipse3"
+        app:layout_constraintTop_toTopOf="@+id/ellipse3" />
+
+    <TextView
+        android:id="@+id/relationships"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/relationships"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse4"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse4"
+        app:layout_constraintStart_toStartOf="@+id/ellipse4"
+        app:layout_constraintTop_toTopOf="@+id/ellipse4" />
+
+    <TextView
+        android:id="@+id/values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/values"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse5"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse5"
+        app:layout_constraintStart_toStartOf="@+id/ellipse5"
+        app:layout_constraintTop_toTopOf="@+id/ellipse5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

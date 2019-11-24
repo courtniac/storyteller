@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreferencesActivity">
+
+    <View
+        android:id="@+id/header5"
+        android:layout_width="411dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/library_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/preferences"
+        android:textColor="@color/white1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/header5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/box1"
+        android:layout_width="367dp"
+        android:layout_height="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:background="@color/gray1"
+        android:onClick="onQuestionClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header5" />
+
+    <TextView
+        android:id="@+id/fav_musician_question"
+        android:layout_width="286dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="26dp"
+        android:text="@string/fav_musician"
+        app:layout_constraintBottom_toBottomOf="@+id/box1"
+        app:layout_constraintEnd_toStartOf="@+id/plus1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/box1"
+        app:layout_constraintTop_toTopOf="@+id/box1"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <ImageView
+        android:id="@+id/plus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box1"
+        app:layout_constraintEnd_toEndOf="@+id/box1"
+        app:layout_constraintTop_toTopOf="@+id/box1"
+        app:layout_constraintVertical_bias="0.514"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <View
+        android:id="@+id/box2"
+        android:layout_width="367dp"
+        android:layout_height="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:background="@color/gray1"
+        android:onClick="onQuestionClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav_musician_question" />
+
+    <TextView
+        android:id="@+id/fav_musician_question2"
+        android:layout_width="286dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="22dp"
+        android:text="@string/fav_actor"
+        app:layout_constraintBottom_toBottomOf="@+id/box2"
+        app:layout_constraintEnd_toStartOf="@+id/plus2"
+        app:layout_constraintStart_toStartOf="@+id/box2"
+        app:layout_constraintTop_toTopOf="@+id/box2" />
+
+    <ImageView
+        android:id="@+id/plus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box2"
+        app:layout_constraintEnd_toEndOf="@+id/box2"
+        app:layout_constraintTop_toTopOf="@+id/box2"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <View
+        android:id="@+id/box3"
+        android:layout_width="367dp"
+        android:layout_height="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:background="@color/gray1"
+        android:onClick="onQuestionClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box2" />
+
+    <TextView
+        android:id="@+id/fav_musician_question3"
+        android:layout_width="283dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="22dp"
+        android:text="@string/fav_celebrity"
+        app:layout_constraintBottom_toBottomOf="@+id/box3"
+        app:layout_constraintEnd_toStartOf="@+id/plus3"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="@+id/box3"
+        app:layout_constraintTop_toTopOf="@+id/box3"
+        app:layout_constraintVertical_bias="0.515" />
+
+    <ImageView
+        android:id="@+id/plus3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box3"
+        app:layout_constraintEnd_toEndOf="@+id/box3"
+        app:layout_constraintTop_toTopOf="@+id/box3"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <View
+        android:id="@+id/box4"
+        android:layout_width="367dp"
+        android:layout_height="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="39dp"
+        android:background="@color/gray1"
+        android:onClick="onQuestionClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box3" />
+
+    <ImageView
+        android:id="@+id/plus4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box4"
+        app:layout_constraintEnd_toEndOf="@+id/box4"
+        app:layout_constraintTop_toTopOf="@+id/box4"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <TextView
+        android:id="@+id/fav_musician_question4"
+        android:layout_width="286dp"
+        android:layout_height="22dp"
+        android:text="@string/fav_food"
+        app:layout_constraintBottom_toBottomOf="@+id/box4"
+        app:layout_constraintEnd_toStartOf="@+id/plus4"
+        app:layout_constraintStart_toStartOf="@+id/box4"
+        app:layout_constraintTop_toTopOf="@+id/box4"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <View
+        android:id="@+id/box5"
+        android:layout_width="367dp"
+        android:layout_height="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:background="@color/gray1"
+        android:onClick="onQuestionClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box4" />
+
+    <TextView
+        android:id="@+id/fav_musician_question5"
+        android:layout_width="286dp"
+        android:layout_height="22dp"
+        android:text="@string/fav_hobby"
+        app:layout_constraintBottom_toBottomOf="@+id/box5"
+        app:layout_constraintEnd_toStartOf="@+id/plus5"
+        app:layout_constraintStart_toStartOf="@+id/box5"
+        app:layout_constraintTop_toTopOf="@+id/box5" />
+
+    <ImageView
+        android:id="@+id/plus5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box5"
+        app:layout_constraintEnd_toEndOf="@+id/box5"
+        app:layout_constraintTop_toTopOf="@+id/box5"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
