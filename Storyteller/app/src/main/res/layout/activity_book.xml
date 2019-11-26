@@ -20,38 +20,60 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="125dp"
-                android:layout_height="170dp"
-                android:background="#2d2d2d"
-                android:id="@+id/bookthumbnail"
-                android:scaleType="centerCrop"/>
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="6dp">-->
 
-            <TextView
-                android:id="@+id/txttitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Book Title"
-                android:layout_marginTop="10dp"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="170dp"
+                    android:background="#2d2d2d"
+                    android:id="@+id/bookthumbnail"
+                    android:scaleType="centerCrop"/>
 
-            <TextView
-                android:id="@+id/txtCat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Category"
-                android:background="#edecec"
-                android:padding="8dp"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/txttitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Title"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/txtDesc"
-                android:textSize="18sp"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"/>
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtCat"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Category"-->
+<!--                android:background="#edecec"-->
+<!--                android:padding="8dp"-->
+<!--                android:layout_marginTop="10dp"/>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txtDesc"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Description"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
 

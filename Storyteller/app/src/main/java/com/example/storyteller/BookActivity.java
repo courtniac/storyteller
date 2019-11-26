@@ -17,20 +17,23 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
-        tvtitle = (TextView) findViewById(R.id.txttitle);
-        tvdescription = (TextView) findViewById(R.id.txtDesc);
-        tvcategory = (TextView) findViewById(R.id.txtCat);
-        img = (ImageView) findViewById(R.id.bookthumbnail);
+        tvtitle = findViewById(R.id.txttitle);
+        tvdescription = findViewById(R.id.txtDesc);
+//        tvcategory = findViewById(R.id.txtCat);
+        img = findViewById(R.id.bookthumbnail);
 
         // Recieve data
         Intent intent = getIntent();
-        String Title = intent.getExtras().getString("Title");
+        String Name = intent.getExtras().getString("Name");
+        String DisplayName = intent.getExtras().getString("Display Name");
         String Description = intent.getExtras().getString("Description");
         int image = intent.getExtras().getInt("Thumbnail") ;
 
         // Setting values
+        StringBuilder str = new StringBuilder(DisplayName);
+        str.append("'s Book");
 
-        tvtitle.setText(Title);
+        tvtitle.setText(str.toString());
         tvdescription.setText(Description);
         img.setImageResource(image);
 

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Storyteller</string>
+
+    <string-array name="pronouns">
+        <item>she/her/hers</item>
+        <item>he/him/his</item>
+        <item>they/them/theirs</item>
+    </string-array>
 </resources>
