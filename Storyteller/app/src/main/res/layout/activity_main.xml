@@ -2,17 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="8dp">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:id="@+id/header"
+            android:layout_width="411dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue1" />
+
+        <TextView
+            android:id="@+id/library_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/library_title"
+            android:textColor="@color/white1"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
