@@ -8,13 +8,13 @@
     tools:context=".AddBookActivity">
 
     <RelativeLayout
+        android:id="@+id/header_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp">
+        android:layout_height="70dp">
 
         <View
             android:id="@+id/header2"
-            android:layout_width="411dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
@@ -27,12 +27,12 @@
             android:id="@+id/createBookTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/create_book"
-            android:textColor="@color/white1"
-            android:textSize="24sp"
-            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:text="@string/create_book"
+            android:textAlignment="center"
+            android:textColor="@color/white1"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/action_back_button"
@@ -49,149 +49,108 @@
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Name"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="179dp" />
-
-    <EditText
-        android:id="@+id/editTextDisplayName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Display Name"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="284dp" />
-
-
-    <Spinner
-        android:id="@+id/spinner"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="700dp"
+        android:layout_margin="8dp">
 
-    <EditText
-        android:id="@+id/editTextBirthday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Birthday" />
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/editTextRelationship"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Relationship"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="455dp" />
-
-    <EditText
-        android:id="@+id/editTextHometown"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Hometown" />
-
-    <EditText
-        android:id="@+id/editTextCurrentResidence"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Current Residence" />
-
-<!--    <Button-->
-<!--        android:id="@+id/createBtn"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Create" />-->
+        <EditText
+            android:id="@+id/editTextDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/display_name"
+            android:inputType="textShortMessage" />
 
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextDisplayName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Birthday"
+            android:inputType="date"
+            android:layout_below="@+id/spinner"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextRelationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/relationship"
+            android:inputType="textShortMessage"
+            android:layout_below="@+id/editTextBirthday"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextHometown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="24"
+            android:hint="@string/hometown"
+            android:inputType="textShortMessage"
+            android:layout_below="@+id/editTextRelationship"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextCurrentResidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="24"
+            android:hint="@string/current_residence"
+            android:inputType="textShortMessage"
+            android:layout_below="@+id/editTextHometown"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/createBtn"
+            android:layout_width="116dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/editTextCurrentResidence"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue1"
+            android:text="@string/Create"
+            android:textColor="@color/white1" />
 
 
+    <!--    <ImageView-->
+    <!--        android:id="@+id/addPhotoBackground"-->
+    <!--        android:layout_width="73dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_alignParentLeft="true"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_marginTop="52dp"-->
+    <!--        android:background="#C4C4C4"-->
+    <!--        android:src="@drawable/ic_add_a_photo"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/header2" />-->
 
-
-<!--    <ImageView-->
-<!--        android:id="@+id/addPhotoBackground"-->
-<!--        android:layout_width="73dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginTop="52dp"-->
-<!--        android:background="#C4C4C4"-->
-<!--        android:src="@drawable/ic_add_a_photo"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/header2" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextName"-->
-<!--        android:layout_width="241dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="28dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:hint="@string/name" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextDisplayName"-->
-<!--        android:layout_width="241dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:hint="@string/display_name" />-->
-
-<!--    <Spinner-->
-<!--        android:id="@+id/spinner"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"/>-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextBirthday"-->
-<!--        android:layout_width="241dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:hint="@string/Birthday" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextCurrentResidence"-->
-<!--        android:layout_width="241dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:hint="@string/current_residence" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextHometown"-->
-<!--        android:layout_width="241dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:hint="@string/hometown" />-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/editTextRelationship"-->
-<!--        android:layout_width="241dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        android:hint="@string/relationship" />-->
-
-    <Button
-        android:id="@+id/createBtn"
-        android:layout_width="116dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="19dp"
-        android:background="@color/blue1"
-        android:text="@string/Create"
-        android:textColor="@color/white1" />
+    </RelativeLayout>
 </LinearLayout>
