@@ -16,6 +16,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     List<Book> lstBook ;
+    RecyclerViewAdapter myAdapter;
 
     int[] imgList = new int[]{R.drawable.bloodymimosa, R.drawable.dustycactus, R.drawable.quepal, R.drawable.aquaspray, R.drawable.lovelylilly};
     int imgListPosition = 0;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         lstBook = new ArrayList<>();
 
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
-        RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this,lstBook);
+        myAdapter = new RecyclerViewAdapter(this,lstBook);
         myrv.setLayoutManager(new GridLayoutManager(this,3));
         myrv.setAdapter(myAdapter);
 
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 0 && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-
             String nameStr = extras.getString("Name");
             String displayNameStr = extras.getString("Display Name");
             String pronounStr = extras.getString("Pronouns");
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             String currResidenceStr = extras.getString("Current Residence");
             lstBook.add(new Book(nameStr, displayNameStr, pronounStr, birthdayStr, relationshipStr, hometownStr, currResidenceStr, imgList[imgListPosition]));
             updateImgListPosition();
+            myAdapter.notifyDataSetChanged();
         }
     }
 

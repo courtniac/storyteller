@@ -27,7 +27,9 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".BookActivity" />
+        <activity
+            android:name=".BookActivity"
+            android:theme="@style/Theme.AppCompat.Light"/>
     </application>
 
 </manifest>
