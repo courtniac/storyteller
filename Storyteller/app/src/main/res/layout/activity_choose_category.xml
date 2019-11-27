@@ -48,71 +48,53 @@
         android:id="@+id/ellipse"
         android:layout_width="135dp"
         android:layout_height="133dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        app:layout_constraintEnd_toStartOf="@+id/ellipse2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header3" />
-
-    <View
-        android:id="@+id/ellipse3"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        app:layout_constraintEnd_toStartOf="@+id/ellipse4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse" />
-
-    <View
-        android:id="@+id/ellipse4"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="36dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse2" />
-
-    <View
-        android:id="@+id/ellipse5"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="48dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse3" />
+        android:layout_marginStart="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/header3"
+        android:layout_marginTop="48dp" />
 
     <View
         android:id="@+id/ellipse2"
         android:layout_width="135dp"
         android:layout_height="133dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="28dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
         android:onClick="goToPreferences"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header3" />
+        android:layout_marginEnd="48dp"
+        app:layout_constraintTop_toTopOf="@+id/ellipse" />
+
+    <View
+        android:id="@+id/ellipse3"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintStart_toStartOf="@id/ellipse"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse"
+        android:layout_marginTop="56dp" />
+
+    <View
+        android:id="@+id/ellipse4"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintEnd_toEndOf="@id/ellipse2"
+        app:layout_constraintTop_toTopOf="@id/ellipse3" />
+
+    <View
+        android:id="@+id/ellipse5"
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:background="@drawable/ellipse"
+        android:backgroundTint="@color/blue2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse3"
+        android:layout_marginTop="56dp" />
 
     <TextView
         android:id="@+id/experiences"
