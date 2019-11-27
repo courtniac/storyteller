@@ -25,4 +25,8 @@ public class AddQuestionActivity extends AppCompatActivity {
     public void onAddClicked(View view) {
         finish();
     }
+
+    public void onBackClick(View view) {
+        onBackPressed();
+    }
 }

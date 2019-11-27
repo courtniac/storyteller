@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class PreferencesActivity extends AppCompatActivity {
 
@@ -19,5 +20,9 @@ public class PreferencesActivity extends AppCompatActivity {
         Intent intent = new Intent(getBaseContext(), AddQuestionActivity.class);
         intent.putExtra("Question", "Who was your favorite musician growing up?");
         startActivity(intent);
+    }
+
+    public void onBackClick(View view) {
+        onBackPressed();
     }
 }

@@ -5,19 +5,24 @@
 
     <TextView
         android:id="@+id/action_back_button"
-        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:text="Back" />
+        android:clickable="true"
+        android:text="&lt; Back"
+        android:textColor="@color/blue1"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/action_add_button"
-        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:text="Add" />
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:text="Add +"
+        android:textColor="@color/blue1"
+        android:textSize="18sp" />
+
 </RelativeLayout>

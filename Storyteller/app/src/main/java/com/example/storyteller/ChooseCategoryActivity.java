@@ -18,4 +18,8 @@ public class ChooseCategoryActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PreferencesActivity.class);
         startActivity(intent);
     }
+
+    public void onBackClick(View view) {
+        onBackPressed();
+    }
 }

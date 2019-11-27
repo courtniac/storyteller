@@ -25,14 +25,27 @@
 
         <TextView
             android:id="@+id/createBookTitle"
-            android:layout_width="134dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/create_book"
-            android:textAlignment="center"
             android:textColor="@color/white1"
             android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/action_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:text="&lt; Back"
+            android:textColor="@color/white1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/header2" />
 
     </RelativeLayout>
 

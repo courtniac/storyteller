@@ -22,13 +22,27 @@
         android:id="@+id/library_title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/preferences"
         android:textColor="@color/white1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/header5"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header5"
+        app:layout_constraintBottom_toBottomOf="@+id/header5" />
+
+    <TextView
+        android:id="@+id/action_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:clickable="true"
+        android:onClick="onBackClick"
+        android:text="&lt; Back"
+        android:textColor="@color/white1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/header5"
+        app:layout_constraintStart_toStartOf="@id/header5"
+        app:layout_constraintTop_toTopOf="@id/header5" />
 
     <View
         android:id="@+id/box1"

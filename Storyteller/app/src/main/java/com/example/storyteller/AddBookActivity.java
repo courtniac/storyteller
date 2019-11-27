@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class AddBookActivity extends AppCompatActivity {
 
@@ -69,7 +70,9 @@ public class AddBookActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
-
+    public void onBackClick(View view) {
+        onBackPressed();
     }
 }
