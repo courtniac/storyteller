@@ -27,8 +27,6 @@
             android:name=".PreferencesActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".ChooseCategoryActivity" />
-        <activity android:name=".CreateBookActivity" />
-        <activity android:name=".LibraryActivity" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".BookActivity"

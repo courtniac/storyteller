@@ -6,43 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".AddCustomQuestionActivity">
 
-    <View
-        android:id="@+id/header4"
-        android:layout_width="411dp"
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/blue1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/library_title4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_question"
-        android:textColor="@color/white1"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/header4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header4" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/action_back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:clickable="true"
-        android:onClick="onBackClick"
-        android:text="&lt; Back"
-        android:textColor="@color/white1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@id/header4"
-        app:layout_constraintStart_toStartOf="@id/header4"
-        app:layout_constraintTop_toTopOf="@id/header4" />
+        <View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/blue1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/createBookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/experiences"
+            android:textAlignment="center"
+            android:textColor="@color/white1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/action_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:text="@string/back"
+            android:textColor="@color/white1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/header2" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/question"
@@ -54,7 +61,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header4" />
+        app:layout_constraintTop_toBottomOf="@+id/header_layout" />
 
     <EditText
         android:id="@+id/answer_question"
