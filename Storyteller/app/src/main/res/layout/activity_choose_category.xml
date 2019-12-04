@@ -6,95 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".ChooseCategoryActivity">
 
-    <View
-        android:id="@+id/header3"
-        android:layout_width="411dp"
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/blue1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/library_title2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onBackClick"
-        android:text="@string/choose_category"
-        android:textColor="@color/white1"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/header3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header3" />
+        <View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/blue1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/action_back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:clickable="true"
-        android:onClick="onBackClick"
-        android:text="&lt; Back"
-        android:textColor="@color/white1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@id/header3"
-        app:layout_constraintStart_toStartOf="@id/header3"
-        app:layout_constraintTop_toTopOf="@id/header3" />
+        <TextView
+            android:id="@+id/createBookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/choose_category"
+            android:textAlignment="center"
+            android:textColor="@color/white1"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/action_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:text="@string/back"
+            android:textColor="@color/white1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/header2" />
+
+    </RelativeLayout>
 
     <View
         android:id="@+id/ellipse"
         android:layout_width="135dp"
         android:layout_height="133dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
+        android:onClick="goToExperiences"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="48dp"
-        app:layout_constraintTop_toBottomOf="@+id/header3"
-        android:layout_marginTop="48dp" />
+        app:layout_constraintTop_toBottomOf="@id/header_layout" />
 
     <View
         android:id="@+id/ellipse2"
         android:layout_width="135dp"
         android:layout_height="133dp"
+        android:layout_marginStart="46dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
         android:onClick="goToPreferences"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="48dp"
+        app:layout_constraintStart_toEndOf="@+id/ellipse"
         app:layout_constraintTop_toTopOf="@+id/ellipse" />
 
     <View
         android:id="@+id/ellipse3"
         android:layout_width="135dp"
         android:layout_height="133dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
+        android:onClick="goToEvents"
         app:layout_constraintStart_toStartOf="@id/ellipse"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse"
-        android:layout_marginTop="56dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ellipse" />
 
     <View
         android:id="@+id/ellipse4"
         android:layout_width="135dp"
         android:layout_height="133dp"
+        android:layout_marginStart="46dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
-        app:layout_constraintEnd_toEndOf="@id/ellipse2"
+        android:onClick="goToRelationships"
+        app:layout_constraintStart_toEndOf="@+id/ellipse3"
         app:layout_constraintTop_toTopOf="@id/ellipse3" />
 
     <View
         android:id="@+id/ellipse5"
         android:layout_width="135dp"
         android:layout_height="133dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
+        android:onClick="goToValues"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse3"
-        android:layout_marginTop="56dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ellipse3" />
 
     <TextView
         android:id="@+id/experiences"

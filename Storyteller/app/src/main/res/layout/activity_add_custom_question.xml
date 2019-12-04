@@ -4,20 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddQuestionActivity">
-
-    <Button
-        android:id="@+id/add_question_finish"
-        android:layout_width="116dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="46dp"
-        android:background="@color/blue1"
-        android:onClick="onAddClicked"
-        android:text="@string/add"
-        android:textColor="@color/white1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question2" />
+    tools:context=".AddCustomQuestionActivity">
 
     <View
         android:id="@+id/header4"
@@ -59,10 +46,10 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="280dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/fav_musician"
+        android:layout_width="153dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/add_custom_question"
         android:textColor="@color/black1"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +60,7 @@
         android:id="@+id/answer_question"
         android:layout_width="232dp"
         android:layout_height="276dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/border"
         android:ems="10"
         android:gravity="start|top"
@@ -82,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question" />
+        app:layout_constraintTop_toBottomOf="@+id/enter_custom_question" />
 
     <TextView
         android:id="@+id/question2"
@@ -107,5 +94,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/question2"
         app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
+
+    <Button
+        android:id="@+id/add_question_finish"
+        android:layout_width="116dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="46dp"
+        android:background="@color/blue1"
+        android:onClick="onAddClicked"
+        android:text="@string/add"
+        android:textColor="@color/white1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question2" />
+
+    <EditText
+        android:id="@+id/enter_custom_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

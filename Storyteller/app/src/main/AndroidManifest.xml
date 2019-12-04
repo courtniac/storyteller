@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".ValuesActivity"></activity>
+        <activity android:name=".RelationshipsActivity" />
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".AddCustomQuestionActivity" />
+        <activity android:name=".ExperiencesActivity" />
         <activity android:name=".TitleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,12 +29,10 @@
         <activity android:name=".ChooseCategoryActivity" />
         <activity android:name=".CreateBookActivity" />
         <activity android:name=".LibraryActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".BookActivity"
-            android:theme="@style/Theme.AppCompat.Light"/>
+            android:theme="@style/Theme.AppCompat.Light" />
     </application>
 
 </manifest>
