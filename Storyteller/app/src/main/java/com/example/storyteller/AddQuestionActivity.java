@@ -17,9 +17,12 @@ public class AddQuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_question);
 
+        Intent intent = getIntent();
+        TextView title = findViewById(R.id.question_category);
+        title.setText(intent.getStringExtra("Title"));
         answer = findViewById(R.id.answer_question);
         //get question from previous page
-        questionStr = getIntent().getStringExtra("Question");
+        questionStr = intent.getStringExtra("Question");
 
         // fill in question
         TextView questionTextView = (TextView) findViewById(R.id.question);
@@ -31,6 +34,7 @@ public class AddQuestionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BookActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.putExtra("empty", false);
         intent.putExtra("question", questionStr);
         intent.putExtra("answer", answerStr);
         startActivity(intent);

@@ -82,14 +82,17 @@ public class BookActivity extends AppCompatActivity {
 
     @Override
     protected void onNewIntent(Intent intent) {
-        String questionStr = intent.getStringExtra("question");
-        String answerStr = intent.getStringExtra("answer");
-        if (emptyContent) {
-            lstBookCard.clear();
-            emptyContent = false;
+        // if there's no content passed in, do nothing
+        if (!intent.getExtras().getBoolean("empty")) {
+            String questionStr = intent.getStringExtra("question");
+            String answerStr = intent.getStringExtra("answer");
+            if (emptyContent) {
+                lstBookCard.remove(1);
+                emptyContent = false;
+            }
+            lstBookCard.add(new BookCard(questionStr, answerStr));
+            cardAdapter.notifyDataSetChanged();
         }
-        lstBookCard.add(new BookCard(questionStr, answerStr));
-        cardAdapter.notifyDataSetChanged();
     }
 
     private void configureActionBar() {

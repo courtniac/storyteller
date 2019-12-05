@@ -44,6 +44,7 @@ public class EventsActivity extends AppCompatActivity {
             startActivity(intent);
         } else {
             Intent intent = new Intent(getBaseContext(), AddQuestionActivity.class);
+            intent.putExtra("Title", getString(R.string.events_stories));
             intent.putExtra("Question", question);
             startActivity(intent);
         }
@@ -54,7 +55,12 @@ public class EventsActivity extends AppCompatActivity {
     }
 
     public void onReturnToHomeClick(View view) {
-        onBackClick(view);
+        Intent intent = new Intent(this, BookActivity.class);
+        intent.putExtra("empty", true);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
     }
 
 }
