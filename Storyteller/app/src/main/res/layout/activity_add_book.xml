@@ -27,8 +27,8 @@
             android:id="@+id/createBookTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/create_book"
             android:textAlignment="center"
             android:textColor="@color/white1"
@@ -41,6 +41,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="18dp"
             android:clickable="true"
+            android:fontFamily="@font/quicksand_bold"
             android:onClick="onBackClick"
             android:text="@string/back"
             android:textColor="@color/white1"
@@ -60,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:fontFamily="@font/quicksand"
             android:hint="@string/name"
             android:inputType="textPersonName|textCapSentences" />
 
@@ -71,6 +73,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:fontFamily="@font/quicksand"
             android:hint="@string/display_name"
             android:inputType="textPersonName|textCapSentences" />
 
@@ -87,55 +90,60 @@
             android:id="@+id/editTextBirthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/Birthday"
-            android:inputType="number"
-            android:digits="0123456789-"
             android:layout_below="@+id/spinner"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:digits="0123456789-"
+            android:ems="10"
+            android:fontFamily="@font/quicksand"
+            android:hint="@string/Birthday"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editTextRelationship"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/relationship"
-            android:inputType="textShortMessage|textCapSentences"
             android:layout_below="@+id/editTextBirthday"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/quicksand"
+            android:hint="@string/relationship"
+            android:inputType="textShortMessage|textCapSentences" />
 
         <EditText
             android:id="@+id/editTextHometown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="24"
-            android:hint="@string/hometown"
-            android:inputType="textShortMessage|textCapSentences"
             android:layout_below="@+id/editTextRelationship"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:ems="24"
+            android:fontFamily="@font/quicksand"
+            android:hint="@string/hometown"
+            android:inputType="textShortMessage|textCapSentences" />
 
         <EditText
             android:id="@+id/editTextCurrentResidence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="24"
-            android:hint="@string/current_residence"
-            android:inputType="textShortMessage|textCapSentences"
             android:layout_below="@+id/editTextHometown"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:ems="24"
+            android:fontFamily="@font/quicksand"
+            android:hint="@string/current_residence"
+            android:inputType="textShortMessage|textCapSentences" />
 
         <Button
             android:id="@+id/createBtn"
             android:layout_width="116dp"
             android:layout_height="45dp"
             android:layout_below="@+id/editTextCurrentResidence"
-            android:layout_marginTop="16dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
             android:background="@color/blue1"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/Create"
             android:textColor="@color/white1" />
 

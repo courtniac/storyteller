@@ -31,15 +31,19 @@
                 android:id="@+id/bookthumbnail"
                 android:scaleType="centerCrop"
                 android:clickable="false" />
+
             <TextView
                 android:id="@+id/txttitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Book Title"
                 android:layout_marginTop="10dp"
+                android:clickable="false"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Book Title"
+                android:textAlignment="center"
+                android:textColor="@color/blue1"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:clickable="false"/>
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cardrecycler_id"

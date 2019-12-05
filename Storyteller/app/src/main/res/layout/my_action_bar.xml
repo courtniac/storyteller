@@ -11,6 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:clickable="true"
+        android:fontFamily="@font/quicksand_bold"
         android:text="&lt; Back"
         android:textColor="@color/blue1"
         android:textSize="18sp" />
@@ -39,9 +40,10 @@
         android:id="@+id/action_add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:clickable="true"
+        android:fontFamily="@font/quicksand_bold"
         android:text="Add +"
         android:textColor="@color/blue1"
         android:textSize="18sp" />

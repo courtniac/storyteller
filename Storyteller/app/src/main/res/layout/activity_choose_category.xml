@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/choose_category"
             android:textAlignment="center"
             android:textColor="@color/white1"
@@ -43,6 +44,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="18dp"
             android:clickable="true"
+            android:fontFamily="@font/quicksand_bold"
             android:onClick="onBackClick"
             android:text="@string/back"
             android:textColor="@color/white1"
@@ -80,6 +82,7 @@
                 android:layout_alignTop="@id/ellipse"
                 android:layout_alignBottom="@id/ellipse"
                 android:layout_centerHorizontal="true"
+                android:fontFamily="@font/quicksand_bold"
                 android:gravity="center_vertical"
                 android:text="@string/experiences"
                 android:textColor="@color/white1"
@@ -105,6 +108,7 @@
                 android:layout_alignTop="@id/ellipse3"
                 android:layout_alignBottom="@id/ellipse3"
                 android:layout_centerHorizontal="true"
+                android:fontFamily="@font/quicksand_bold"
                 android:gravity="center_vertical"
                 android:text="@string/events_stories"
                 android:textColor="@color/white1"
@@ -133,6 +137,7 @@
                 android:layout_alignTop="@id/ellipse2"
                 android:layout_alignBottom="@id/ellipse2"
                 android:layout_centerHorizontal="true"
+                android:fontFamily="@font/quicksand_bold"
                 android:gravity="center_vertical"
                 android:text="@string/preferences"
                 android:textColor="@color/white1"
@@ -160,7 +165,8 @@
                 android:gravity="center_vertical"
                 android:text="@string/relationships"
                 android:textColor="@color/white1"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -182,6 +188,7 @@
         android:id="@+id/values"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
         android:text="@string/values"
         android:textColor="@color/white1"
         android:textStyle="bold"
