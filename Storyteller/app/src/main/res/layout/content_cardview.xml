@@ -21,19 +21,23 @@
 
         <TextView
             android:id="@+id/tvQuestion"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"/>
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="start"
+            android:textColor="#313030"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tvAnswer"
-            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tvQuestion"
+            android:fontFamily="@font/quicksand_bold"
             android:gravity="start"
-            android:layout_below="@id/tvQuestion" />
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
