@@ -19,6 +19,26 @@ public class ChooseCategoryActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToExperiences(View view) {
+        Intent intent = new Intent(this, ExperiencesActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToEvents(View view) {
+        Intent intent = new Intent(this, EventsActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToRelationships(View view) {
+        Intent intent = new Intent(this, RelationshipsActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToValues(View view) {
+        Intent intent = new Intent(this, ValuesActivity.class);
+        startActivity(intent);
+    }
+
     public void onBackClick(View view) {
         onBackPressed();
     }

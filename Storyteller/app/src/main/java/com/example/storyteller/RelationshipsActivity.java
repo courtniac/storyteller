@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-public class PreferencesActivity extends AppCompatActivity {
+public class RelationshipsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_preferences);
+        setContentView(R.layout.activity_relationships);
     }
 
     public void onQuestionClick(View view) {
@@ -21,19 +20,19 @@ public class PreferencesActivity extends AppCompatActivity {
         int id = view.getId();
         switch (id) {
             case R.id.pref_box_1:
-                question = getString(R.string.fav_musician);
+                question = getString(R.string.relate_meet);
                 break;
             case R.id.pref_box_2:
-                question = getString(R.string.fav_actor);
+                question = getString(R.string.relate_evolve);
                 break;
             case R.id.pref_box_3:
-                question = getString(R.string.fav_celebrity);
+                question = getString(R.string.relate_kiss);
                 break;
             case R.id.pref_box_4:
-                question = getString(R.string.fav_food);
+                question = getString(R.string.relate_change);
                 break;
             case R.id.pref_box_5:
-                question = getString(R.string.fav_hobby);
+                question = getString(R.string.relate_lessons);
                 break;
             case R.id.pref_box_6:
                 question = "Insert your custom question here";

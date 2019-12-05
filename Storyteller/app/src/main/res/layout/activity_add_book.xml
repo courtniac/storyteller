@@ -42,7 +42,7 @@
             android:layout_marginStart="18dp"
             android:clickable="true"
             android:onClick="onBackClick"
-            android:text="&lt; Back"
+            android:text="@string/back"
             android:textColor="@color/white1"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@id/header2" />

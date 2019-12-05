@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreferencesActivity">
+    tools:context=".ValuesActivity">
 
     <Button
         android:id="@+id/get-started3"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/preferences"
+            android:text="@string/values"
             android:textAlignment="center"
             android:textColor="@color/white1"
             android:textSize="24sp" />
@@ -74,7 +74,6 @@
         android:background="@color/gray1"
         android:onClick="onQuestionClick"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_layout" />
 
@@ -83,7 +82,7 @@
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="@string/fav_musician"
+        android:text="@string/val_remembered"
         app:layout_constraintBottom_toBottomOf="@+id/pref_box_1"
         app:layout_constraintStart_toStartOf="@+id/pref_box_1"
         app:layout_constraintTop_toTopOf="@+id/pref_box_1" />
@@ -114,7 +113,7 @@
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="@string/fav_actor"
+        android:text="@string/val_world"
         app:layout_constraintBottom_toBottomOf="@+id/pref_box_2"
         app:layout_constraintStart_toStartOf="@+id/pref_box_2"
         app:layout_constraintTop_toTopOf="@+id/pref_box_2" />
@@ -145,7 +144,7 @@
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="@string/fav_celebrity"
+        android:text="@string/val_motto"
         app:layout_constraintBottom_toBottomOf="@+id/pref_box_3"
         app:layout_constraintStart_toStartOf="@+id/pref_box_3"
         app:layout_constraintTop_toTopOf="@+id/pref_box_3" />
@@ -176,7 +175,7 @@
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="@string/fav_food"
+        android:text="@string/val_good_person"
         app:layout_constraintBottom_toBottomOf="@+id/pref_box_4"
         app:layout_constraintStart_toStartOf="@+id/pref_box_4"
         app:layout_constraintTop_toTopOf="@+id/pref_box_4" />
@@ -218,7 +217,7 @@
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="@string/fav_hobby"
+        android:text="@string/val_family_importance"
         app:layout_constraintBottom_toBottomOf="@+id/pref_box_5"
         app:layout_constraintStart_toStartOf="@+id/pref_box_5"
         app:layout_constraintTop_toTopOf="@+id/pref_box_5"
@@ -235,19 +234,19 @@
         app:layout_constraintTop_toTopOf="@+id/pref_box_6" />
 
     <ImageView
-            android:id="@+id/plus5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/pref_box_5"
-            app:layout_constraintEnd_toEndOf="@+id/pref_box_5"
-            app:layout_constraintTop_toTopOf="@+id/pref_box_5"
-            app:srcCompat="@drawable/ic_add_black_24dp" />
+        android:id="@+id/plus5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pref_box_5"
+        app:layout_constraintEnd_toEndOf="@+id/pref_box_5"
+        app:layout_constraintTop_toTopOf="@+id/pref_box_5"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
     <ImageView
         android:id="@+id/plus6"
-        android:layout_width="28dp"
-        android:layout_height="29dp"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
@@ -255,6 +254,5 @@
         app:layout_constraintEnd_toEndOf="@+id/pref_box_6"
         app:layout_constraintTop_toTopOf="@+id/pref_box_6"
         app:srcCompat="@drawable/ic_add_black_24dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
