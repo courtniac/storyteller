@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lstBook = new ArrayList<>();
+        // Create a sample book
+        lstBook.add(new Book("Ruixuan","Po po", "she/her/hers", "11-25-1955",
+                "Grandma", "China", "San Francisco", imgList[imgListPosition]));
+        updateImgListPosition();
 
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
         myAdapter = new RecyclerViewAdapter(this,lstBook);
