@@ -44,13 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
 
                 Intent intent = new Intent(mContext,BookActivity.class);
-
                 // passing data to the book activity
-//                intent.putExtra("Name",mData.get(position).getName());
-//                intent.putExtra("Display Name",mData.get(position).getDisplayName());
-//                intent.putExtra("Description",mData.get(position).getDescription());
-//                intent.putExtra("Thumbnail",mData.get(position).getThumbnail());
-//                intent.putExtra("book", mData.get(position));
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("book", mData.get(position));
                 intent.putExtras(bundle);

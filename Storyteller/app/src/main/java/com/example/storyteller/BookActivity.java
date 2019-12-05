@@ -2,7 +2,6 @@ package com.example.storyteller;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,8 +22,9 @@ public class BookActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private View wholeView;
 
-    List<BookCard> lstBookCard ;
-    CardRecyclerAdapter cardAdapter;
+    private List<BookCard> lstBookCard ;
+    private CardRecyclerAdapter cardAdapter;
+    private boolean emptyContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class BookActivity extends AppCompatActivity {
         String DisplayName = book.getDisplayName();
         String Description = book.getDescription();
         int image = book.getThumbnail();
+        emptyContent = true;
 
         // Set values
         StringBuilder str = new StringBuilder(DisplayName);
@@ -51,11 +52,9 @@ public class BookActivity extends AppCompatActivity {
         // Set card recylcer (displays question/answer)
         lstBookCard = new ArrayList<>();
         lstBookCard.add(new BookCard("", Description));
-        lstBookCard.add(new BookCard("question 1", "ANSWER"));
-        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
-        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
-        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
-        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
+        // sample card
+        lstBookCard.add(new BookCard("What should I ask Po po?",
+                                    "Find some sample questions by clicking on the upper right of the screen!"));
 
         RecyclerView cardrv = findViewById(R.id.cardrecycler_id);
         cardAdapter = new CardRecyclerAdapter(this, lstBookCard);
@@ -79,6 +78,18 @@ public class BookActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        String questionStr = intent.getStringExtra("question");
+        String answerStr = intent.getStringExtra("answer");
+        if (emptyContent) {
+            lstBookCard.clear();
+            emptyContent = false;
+        }
+        lstBookCard.add(new BookCard(questionStr, answerStr));
+        cardAdapter.notifyDataSetChanged();
     }
 
     private void configureActionBar() {
