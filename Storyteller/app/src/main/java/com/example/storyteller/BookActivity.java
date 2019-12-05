@@ -53,7 +53,7 @@ public class BookActivity extends AppCompatActivity {
         lstBookCard = new ArrayList<>();
         lstBookCard.add(new BookCard("", Description));
         // sample card
-        lstBookCard.add(new BookCard("What should I ask Po po?",
+        lstBookCard.add(new BookCard("What should I ask "+DisplayName+"?",
                                     "Find some sample questions by clicking on the upper right of the screen!"));
 
         RecyclerView cardrv = findViewById(R.id.cardrecycler_id);
@@ -117,4 +117,12 @@ public class BookActivity extends AppCompatActivity {
         actionBar.setCustomView(customActionView, new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
         actionBar.hide();
     }
+    public void onItemClick(View view) {
+        if (actionBar.isShowing()) {
+            actionBar.hide();
+        } else {
+            actionBar.show();
+        }
+    }
 }
+
