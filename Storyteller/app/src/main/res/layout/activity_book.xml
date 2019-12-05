@@ -26,6 +26,7 @@
             <ImageView
                 android:layout_width="125dp"
                 android:layout_height="170dp"
+                android:layout_marginTop="8dp"
                 android:background="#2d2d2d"
                 android:id="@+id/bookthumbnail"
                 android:scaleType="centerCrop"
@@ -43,6 +44,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cardrecycler_id"
                 android:clickable="false"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

@@ -51,110 +51,132 @@
 
     </RelativeLayout>
 
-    <View
-        android:id="@+id/ellipse"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        android:onClick="goToExperiences"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_layout" />
+    <LinearLayout
+        android:id="@+id/linear_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/header_layout">
 
-    <View
-        android:id="@+id/ellipse2"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="46dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        android:onClick="goToPreferences"
-        app:layout_constraintStart_toEndOf="@+id/ellipse"
-        app:layout_constraintTop_toTopOf="@+id/ellipse" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-    <View
-        android:id="@+id/ellipse3"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        android:onClick="goToEvents"
-        app:layout_constraintStart_toStartOf="@id/ellipse"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse" />
+            <View
+                android:id="@+id/ellipse"
+                android:layout_width="135dp"
+                android:layout_height="133dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ellipse"
+                android:backgroundTint="@color/blue2"
+                android:onClick="goToExperiences" />
 
-    <View
-        android:id="@+id/ellipse4"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="46dp"
-        android:background="@drawable/ellipse"
-        android:backgroundTint="@color/blue2"
-        android:onClick="goToRelationships"
-        app:layout_constraintStart_toEndOf="@+id/ellipse3"
-        app:layout_constraintTop_toTopOf="@id/ellipse3" />
+            <TextView
+                android:id="@+id/experiences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ellipse"
+                android:layout_alignBottom="@id/ellipse"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="@string/experiences"
+                android:textColor="@color/white1"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ellipse3"
+                android:layout_width="135dp"
+                android:layout_height="133dp"
+                android:layout_below="@id/ellipse"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ellipse"
+                android:backgroundTint="@color/blue2"
+                android:onClick="goToEvents"
+                app:layout_constraintTop_toBottomOf="@+id/ellipse" />
+
+
+            <TextView
+                android:id="@+id/eventsAndStories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ellipse3"
+                android:layout_alignBottom="@id/ellipse3"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="@string/events_stories"
+                android:textColor="@color/white1"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/ellipse2"
+                android:layout_width="135dp"
+                android:layout_height="133dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ellipse"
+                android:backgroundTint="@color/blue2"
+                android:onClick="goToPreferences" />
+
+            <TextView
+                android:id="@+id/preferences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ellipse2"
+                android:layout_alignBottom="@id/ellipse2"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="@string/preferences"
+                android:textColor="@color/white1"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ellipse4"
+                android:layout_width="135dp"
+                android:layout_height="133dp"
+                android:layout_below="@id/ellipse2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ellipse"
+                android:backgroundTint="@color/blue2"
+                android:onClick="goToRelationships"
+                app:layout_constraintTop_toBottomOf="@+id/ellipse2" />
+
+            <TextView
+                android:id="@+id/relationships"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ellipse4"
+                android:layout_alignBottom="@id/ellipse4"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="@string/relationships"
+                android:textColor="@color/white1"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
 
     <View
         android:id="@+id/ellipse5"
         android:layout_width="135dp"
         android:layout_height="133dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="46dp"
         android:background="@drawable/ellipse"
         android:backgroundTint="@color/blue2"
         android:onClick="goToValues"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse3" />
-
-    <TextView
-        android:id="@+id/experiences"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/experiences"
-        android:textColor="@color/white1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ellipse"
-        app:layout_constraintEnd_toEndOf="@+id/ellipse"
-        app:layout_constraintStart_toStartOf="@+id/ellipse"
-        app:layout_constraintTop_toTopOf="@+id/ellipse" />
-
-    <TextView
-        android:id="@+id/preferences"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/preferences"
-        android:textColor="@color/white1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ellipse2"
-        app:layout_constraintEnd_toEndOf="@+id/ellipse2"
-        app:layout_constraintStart_toStartOf="@+id/ellipse2"
-        app:layout_constraintTop_toTopOf="@+id/ellipse2" />
-
-    <TextView
-        android:id="@+id/eventsAndStories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/events_stories"
-        android:textColor="@color/white1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ellipse3"
-        app:layout_constraintEnd_toEndOf="@+id/ellipse3"
-        app:layout_constraintStart_toStartOf="@+id/ellipse3"
-        app:layout_constraintTop_toTopOf="@+id/ellipse3" />
-
-    <TextView
-        android:id="@+id/relationships"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/relationships"
-        android:textColor="@color/white1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ellipse4"
-        app:layout_constraintEnd_toEndOf="@+id/ellipse4"
-        app:layout_constraintStart_toStartOf="@+id/ellipse4"
-        app:layout_constraintTop_toTopOf="@+id/ellipse4" />
+        app:layout_constraintTop_toBottomOf="@id/linear_wrapper" />
 
     <TextView
         android:id="@+id/values"

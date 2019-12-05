@@ -14,23 +14,25 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
         <TextView
             android:id="@+id/tvQuestion"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center" />
+            android:gravity="start"/>
         <TextView
             android:id="@+id/tvAnswer"
             android:textSize="18sp"
-            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:gravity="start"
             android:layout_below="@id/tvQuestion" />
 
     </RelativeLayout>
