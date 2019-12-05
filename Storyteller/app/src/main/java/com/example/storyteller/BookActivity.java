@@ -10,13 +10,21 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookActivity extends AppCompatActivity {
 
-    private TextView tvtitle,tvdescription,tvcategory;
+    private TextView tvtitle;
     private ImageView img;
     private ActionBar actionBar;
     private View wholeView;
+
+    List<BookCard> lstBookCard ;
+    CardRecyclerAdapter cardAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,24 +32,36 @@ public class BookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book);
 
         tvtitle = findViewById(R.id.txttitle);
-        tvdescription = findViewById(R.id.txtDesc);
-//        tvcategory = findViewById(R.id.txtCat);
         img = findViewById(R.id.bookthumbnail);
 
         // Recieve data
         Intent intent = getIntent();
-        String Name = intent.getExtras().getString("Name");
-        String DisplayName = intent.getExtras().getString("Display Name");
-        String Description = intent.getExtras().getString("Description");
-        int image = intent.getExtras().getInt("Thumbnail") ;
+        Book book = intent.getExtras().getParcelable("book");
+        String DisplayName = book.getDisplayName();
+        String Description = book.getDescription();
+        int image = book.getThumbnail();
 
-        // Setting values
+        // Set values
         StringBuilder str = new StringBuilder(DisplayName);
         str.append("'s Book");
 
         tvtitle.setText(str.toString());
-        tvdescription.setText(Description);
         img.setImageResource(image);
+
+        // Set card recylcer (displays question/answer)
+        lstBookCard = new ArrayList<>();
+        lstBookCard.add(new BookCard("", Description));
+        lstBookCard.add(new BookCard("question 1", "ANSWER"));
+        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
+        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
+        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
+        lstBookCard.add(new BookCard("question 2", "this is our answer\nsecond line : )"));
+
+        RecyclerView cardrv = findViewById(R.id.cardrecycler_id);
+        cardAdapter = new CardRecyclerAdapter(this, lstBookCard);
+        cardrv.setLayoutManager(new LinearLayoutManager(this));
+        cardrv.setAdapter(cardAdapter);
+        cardrv.setNestedScrollingEnabled(false);
 
         // Set action bar
         actionBar =  getSupportActionBar();

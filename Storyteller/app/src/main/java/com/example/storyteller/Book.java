@@ -1,8 +1,11 @@
 package com.example.storyteller;
 
-public class Book {
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.util.Log;
 
-    private String Title;
+public class Book implements Parcelable {
+
     private String Category = "placeholder";
     private String Description;
     private int Thumbnail ;
@@ -29,6 +32,13 @@ public class Book {
         Thumbnail = thumbnail;
 
         setDescription();
+    }
+
+    public Book(Parcel source) {
+        Name = source.readString();
+        DisplayName = source.readString();
+        Description = source.readString();
+        Thumbnail = source.readInt();
     }
 
     public String getName() {
@@ -58,10 +68,6 @@ public class Book {
 
     public void setName(String name) {
         Name = name;
-    }
-
-    public void setCategory(String category) {
-        Category = category;
     }
 
     public void setDescription() {
@@ -101,4 +107,29 @@ public class Book {
         }
 
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int i) {
+        dest.writeString(Name);
+        dest.writeString(DisplayName);
+        dest.writeString(Description);
+        dest.writeInt(Thumbnail);
+    }
+
+    public static final Parcelable.Creator<Book> CREATOR = new Parcelable.Creator<Book>() {
+        @Override
+        public Book[] newArray(int size) {
+            return new Book[size];
+        }
+
+        @Override
+        public Book createFromParcel(Parcel source) {
+            return new Book(source);
+        }
+    };
 }
