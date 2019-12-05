@@ -117,4 +117,12 @@ public class BookActivity extends AppCompatActivity {
         actionBar.setCustomView(customActionView, new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
         actionBar.hide();
     }
+    public void onItemClick(View view) {
+        if (actionBar.isShowing()) {
+            actionBar.hide();
+        } else {
+            actionBar.show();
+        }
+    }
 }
+
