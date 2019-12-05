@@ -2,11 +2,9 @@ package com.example.storyteller;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 
 public class Book implements Parcelable {
 
-    private String Category = "placeholder";
     private String Description;
     private int Thumbnail ;
 
@@ -17,9 +15,6 @@ public class Book implements Parcelable {
     private String Relationship;
     private String Hometown;
     private String CurrResidence;
-
-    public Book() {
-    }
 
     public Book(String name, String displayName, String pronouns, String birthday, String relationship, String hometown, String currResidence, int thumbnail) {
         Name = name;
@@ -53,10 +48,6 @@ public class Book implements Parcelable {
         return Pronouns;
     }
 
-    public String getCategory() {
-        return Category;
-    }
-
     public String getDescription() {
         return Description;
     }
@@ -65,10 +56,6 @@ public class Book implements Parcelable {
         return Thumbnail;
     }
 
-
-    public void setName(String name) {
-        Name = name;
-    }
 
     public void setDescription() {
         StringBuilder str = new StringBuilder();
