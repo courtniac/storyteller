@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddBookActivity extends AppCompatActivity {
 
@@ -55,19 +57,24 @@ public class AddBookActivity extends AppCompatActivity {
                 String relationshipStr = relationship.getText().toString();
                 String hometownStr = hometown.getText().toString();
                 String currResidenceStr = currResidence.getText().toString();
-
-                Intent returnIntent = new Intent();
-                Bundle extras = new Bundle();
-                extras.putString("Name", nameStr);
-                extras.putString("Display Name", displayNameStr);
-                extras.putString("Pronouns", pronounStr);
-                extras.putString("Birthday", birthdayStr);
-                extras.putString("Relationship", relationshipStr);
-                extras.putString("Hometown", hometownStr);
-                extras.putString("Current Residence", currResidenceStr);
-                returnIntent.putExtras(extras);
-                setResult(RESULT_OK, returnIntent); //By not passing the intent in the result, the calling activity will get null data.
-                finish();
+                if (nameStr.trim().length() > 0 && displayNameStr.trim().length() > 0) {
+                    Intent returnIntent = new Intent();
+                    Bundle extras = new Bundle();
+                    extras.putString("Name", nameStr);
+                    extras.putString("Display Name", displayNameStr);
+                    extras.putString("Pronouns", pronounStr);
+                    extras.putString("Birthday", birthdayStr);
+                    extras.putString("Relationship", relationshipStr);
+                    extras.putString("Hometown", hometownStr);
+                    extras.putString("Current Residence", currResidenceStr);
+                    returnIntent.putExtras(extras);
+                    setResult(RESULT_OK, returnIntent); //By not passing the intent in the result, the calling activity will get null data.
+                    finish();
+                } else {
+                    Toast toast= Toast.makeText(getApplicationContext(), "Name and Display Name cannot be empty", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+                    toast.show();
+                }
             }
         });
     }

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddQuestionActivity extends AppCompatActivity {
     String questionStr;
@@ -36,15 +38,21 @@ public class AddQuestionActivity extends AppCompatActivity {
 
     public void onAddClicked(View view) {
         String answerStr = answer.getText().toString();
-        Intent intent = new Intent(this, BookActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        intent.putExtra("empty", false);
-        intent.putExtra("question", questionStr);
-        intent.putExtra("answer", answerStr);
-        intent.putExtra("category", categoryStr);
-        startActivity(intent);
-        finish();
+        if (answerStr.trim().length() > 0) {
+            Intent intent = new Intent(this, BookActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intent.putExtra("empty", false);
+            intent.putExtra("question", questionStr);
+            intent.putExtra("answer", answerStr);
+            intent.putExtra("category", categoryStr);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast toast= Toast.makeText(this, "Answer cannot be empty", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
+        }
     }
 
     public void onBackClick(View view) {
