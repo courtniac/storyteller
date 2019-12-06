@@ -21,6 +21,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp"
+
             android:background="@color/blue1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,8 +77,8 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:singleLine="false"
+        android:textCursorDrawable="@drawable/blue_cursor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_custom_question" />
 
@@ -126,6 +127,8 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:textCursorDrawable="@drawable/blue_cursor"
+        android:backgroundTint="@color/blue1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question" />
