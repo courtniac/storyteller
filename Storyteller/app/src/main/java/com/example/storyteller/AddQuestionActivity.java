@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class AddQuestionActivity extends AppCompatActivity {
     String questionStr;
+    String categoryStr;
     EditText answer;
 
     @Override
@@ -18,11 +19,15 @@ public class AddQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_question);
 
         Intent intent = getIntent();
-        TextView title = findViewById(R.id.question_category);
-        title.setText(intent.getStringExtra("Title"));
-        answer = findViewById(R.id.answer_question);
         //get question from previous page
-        questionStr = intent.getStringExtra("Question");
+        questionStr = intent.getStringExtra("question");
+
+        //get category from previous page
+        TextView title = findViewById(R.id.question_category);
+        categoryStr = intent.getStringExtra("category");
+        title.setText(categoryStr);
+        answer = findViewById(R.id.answer_question);
+
 
         // fill in question
         TextView questionTextView = (TextView) findViewById(R.id.question);
@@ -37,6 +42,7 @@ public class AddQuestionActivity extends AppCompatActivity {
         intent.putExtra("empty", false);
         intent.putExtra("question", questionStr);
         intent.putExtra("answer", answerStr);
+        intent.putExtra("category", categoryStr);
         startActivity(intent);
         finish();
     }

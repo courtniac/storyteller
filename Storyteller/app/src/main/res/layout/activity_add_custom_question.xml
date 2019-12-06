@@ -27,12 +27,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/createBookTitle"
+            android:id="@+id/question_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/quicksand_bold"
-            android:text="@string/experiences"
             android:textAlignment="center"
             android:textColor="@color/white1"
             android:textSize="24sp" />
@@ -69,12 +68,11 @@
 
     <EditText
         android:id="@+id/answer_question"
-        android:layout_width="319dp"
-        android:layout_height="318dp"
-        android:layout_marginTop="33dp"
+        android:layout_width="320dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/border"
         android:ems="10"
-        android:fontFamily="@font/quicksand"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:singleLine="false"
@@ -88,23 +86,21 @@
         android:layout_width="183dp"
         android:layout_height="26dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/quicksand_bold"
         android:text="@string/add_photo_optional"
         android:textColor="@color/black1"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/answer_question" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="76dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/question2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/answer_question"
         app:layout_constraintTop_toTopOf="@+id/question2"
         app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
 
@@ -112,7 +108,7 @@
         android:id="@+id/add_question_finish"
         android:layout_width="116dp"
         android:layout_height="45dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="32dp"
         android:background="@color/blue1"
         android:fontFamily="@font/quicksand_bold"
         android:onClick="onAddClicked"

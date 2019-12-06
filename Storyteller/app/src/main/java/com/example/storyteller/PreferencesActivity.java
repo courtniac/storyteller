@@ -42,11 +42,12 @@ public class PreferencesActivity extends AppCompatActivity {
 
         if (id == R.id.pref_box_6) {
             Intent intent = new Intent(getBaseContext(), AddCustomQuestionActivity.class);
+            intent.putExtra("category", getString(R.string.preferences));
             startActivity(intent);
         } else {
             Intent intent = new Intent(getBaseContext(), AddQuestionActivity.class);
-            intent.putExtra("Title", getString(R.string.relationships));
-            intent.putExtra("Question", question);
+            intent.putExtra("category", getString(R.string.preferences));
+            intent.putExtra("question", question);
             startActivity(intent);
         }
     }
