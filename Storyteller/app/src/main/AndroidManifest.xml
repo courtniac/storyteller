@@ -23,14 +23,12 @@
         </activity>
         <activity android:name=".AddBookActivity" />
         <activity android:name=".AddQuestionActivity" />
-        <activity
-            android:name=".PreferencesActivity"
-            android:parentActivityName=".MainActivity" />
+        <activity android:name=".PreferencesActivity" />
         <activity android:name=".ChooseCategoryActivity" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".BookActivity"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:theme="@style/ActionBarTheme" />
 
         <meta-data
             android:name="preloaded_fonts"
