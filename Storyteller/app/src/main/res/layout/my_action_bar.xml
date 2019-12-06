@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/action_add_button"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="76dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_marginEnd="88dp"
         android:text="Export"
         android:textColor="@color/blue1"
         android:textSize="18sp"
@@ -32,7 +33,7 @@
     <ImageView
         android:layout_width="14dp"
         android:layout_height="14dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:layout_alignTop="@id/action_export_button"
         android:layout_marginStart="60dp"
         android:layout_alignStart="@id/action_export_button"
