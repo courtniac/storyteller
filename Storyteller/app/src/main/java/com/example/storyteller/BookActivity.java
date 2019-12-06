@@ -2,6 +2,7 @@ package com.example.storyteller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BookActivity extends AppCompatActivity {
@@ -22,45 +24,61 @@ public class BookActivity extends AppCompatActivity {
     private ActionBar actionBar;
     private View wholeView;
 
+    private String bookIdentifier;
+    private boolean emptyContent;
+
     private List<BookCard> lstBookCard ;
     private CardRecyclerAdapter cardAdapter;
-    private boolean emptyContent;
+
+    private Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
+        // get views
         tvtitle = findViewById(R.id.txttitle);
         img = findViewById(R.id.bookthumbnail);
 
-        // Recieve data
+        // Receive data
         Intent intent = getIntent();
         Book book = intent.getExtras().getParcelable("book");
-        String DisplayName = book.getDisplayName();
-        String Description = book.getDescription();
+        String displayName = book.getDisplayName();
+        String description = book.getDescription();
         int image = book.getThumbnail();
-        emptyContent = true;
 
         // Set values
-        StringBuilder str = new StringBuilder(DisplayName);
-        str.append("'s Book");
-
-        tvtitle.setText(str.toString());
+        tvtitle.setText(displayName + "'s Book");
         img.setImageResource(image);
+        // Use Name+DisplayName as the book identifier
+        bookIdentifier = book.getName() + displayName;
+        bookIdentifier = bookIdentifier.replaceAll("\\s+","");
 
-        // Set card recylcer (displays question/answer)
+        // Set db
+        database = new Database(getApplicationContext());
+
+        // Set card recycler
         lstBookCard = new ArrayList<>();
-        lstBookCard.add(new BookCard("", Description));
-        // sample card
-        lstBookCard.add(new BookCard("What should I ask "+DisplayName+"?",
-                                    "Find some sample questions by clicking on the upper right of the screen!"));
+        lstBookCard.add(new BookCard("", "", description, ""));
+        // Set sample card
+        if (database.getCount(bookIdentifier) == 0) {
+            lstBookCard.add(new BookCard(bookIdentifier,
+                    "What should I ask "+displayName+"?",
+                    "Find some sample questions by clicking on the upper right of the screen!",
+                    ""));
+            emptyContent = true;
+        } else {
+            lstBookCard.addAll(database.getAll(bookIdentifier));
+            Collections.sort(lstBookCard);
+            emptyContent = false;
+        }
 
-        RecyclerView cardrv = findViewById(R.id.cardrecycler_id);
+        RecyclerView cardRV = findViewById(R.id.cardrecycler_id);
         cardAdapter = new CardRecyclerAdapter(this, lstBookCard);
-        cardrv.setLayoutManager(new LinearLayoutManager(this));
-        cardrv.setAdapter(cardAdapter);
-        cardrv.setNestedScrollingEnabled(false);
+        cardRV.setLayoutManager(new LinearLayoutManager(this));
+        cardRV.setAdapter(cardAdapter);
+        cardRV.setNestedScrollingEnabled(false);
 
         // Set action bar
         actionBar =  getSupportActionBar();
@@ -86,11 +104,14 @@ public class BookActivity extends AppCompatActivity {
         if (!intent.getExtras().getBoolean("empty")) {
             String questionStr = intent.getStringExtra("question");
             String answerStr = intent.getStringExtra("answer");
+            String categoryStr = intent.getStringExtra("category");
             if (emptyContent) {
                 lstBookCard.remove(1);
                 emptyContent = false;
             }
-            lstBookCard.add(new BookCard(questionStr, answerStr));
+            BookCard item = database.insert(new BookCard(bookIdentifier, questionStr, answerStr, categoryStr));
+            lstBookCard.add(item);
+            Collections.sort(lstBookCard);
             cardAdapter.notifyDataSetChanged();
         }
     }

@@ -12,6 +12,9 @@ public class TitleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title);
+
+        Database db = new Database(getApplicationContext());
+        db.clearDatabase();
     }
 
     public void goToLibrary(View view) {
